@@ -16,7 +16,7 @@ func PostHandler(w *http.ResponseWriter, r *http.Request) {
 func main() {
 	r := mux.NewRouter()
 
-	http.HandleFunc("/user", func(w http.ResponseWriter, r *http.Request) {
+	r.HandleFunc("/user", func(w http.ResponseWriter, r *http.Request) {
 		switch r.Method {
 		default:
 			w.Header().Set("Content-Type", "application/json")
